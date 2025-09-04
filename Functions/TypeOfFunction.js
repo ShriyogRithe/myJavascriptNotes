@@ -342,3 +342,51 @@
 
 
 
+//////////////////////////////////////////////////////////=======================================================
+
+
+
+// function debounce(func, timeout = 300){
+//   let timer;
+//   return (...args) => {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => { func(...args) }, timeout);
+//   };
+// }
+// function saveInput(data){
+//   console.log('Saving data', data);
+// }
+
+// const debounceSave = debounce(saveInput, 300
+
+
+
+
+// const inputElement = document.getElementById('myInput');
+
+// inputElement.addEventListener('input', (e) => debounceSave(e.target.value));
+// function throttleMessage(fn, delay) {
+//     let lastCall = 0;
+//     return (...args) => {
+//         const now = Date.now()
+//         if(now - lastCall <= delay) {
+//             return;
+//         } else {
+//             lastCall = now
+//             fn(...args)
+//         }
+//     }
+// }
+
+
+// const sendMessage = (...args) => {
+//     console.log('sending message... ', ...args)
+// }
+
+// const tmfirst = throttleMessage(sendMessage, 1000)
+
+// const inputElement = document.getElementById("myInput");
+// inputElement.addEventListener('input', (e) => tmfirst(e.target.value, 'shriyog'))
+
+
+//////////////////////////////////////////////////////////=======================================================
