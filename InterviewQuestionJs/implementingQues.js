@@ -1,4 +1,4 @@
-//1 . Flattening the object
+// 1 . Flattening the object
 // const myObj = {
 //     'A' : 12,
 //     'B' : 24,
@@ -168,3 +168,44 @@
 /////////////////////////////////////////////////////////////=======================================================
 
 
+/*
+
+function flattenArray(arr) {
+  let result = [];
+
+  for (let item of arr) {
+    if (Array.isArray(item)) {
+      result.push(...flattenArray(item));
+    } else {
+      result.push(item);
+    }
+  }
+
+  return result;
+}
+
+// Example
+console.log(flattenArray([1, [2, [3, 4], 5], 6]));
+
+*/
+
+
+/////////////////////////////////////////////////////////////=======================================================
+
+
+/*
+| Feature                     | **Cookies** 🍪                                    | **LocalStorage** 📦                |
+| --------------------------- | ------------------------------------------------- | ---------------------------------- |
+| **Storage limit**           | ~4 KB                                             | ~5–10 MB                           |
+| **Expiration**              | Can expire (set by server or client)              | No expiry (until manually cleared) |
+| **Sent with every request** | ✅ Yes (automatic)                                 | ❌ No                               |
+| **Accessible by JS**        | Yes (unless `HttpOnly`)                           | Yes                                |
+| **Security**                | More secure with `HttpOnly`, `Secure`, `SameSite` | Less secure (JS-accessible)        |
+| **Scope**                   | Domain + path                                     | Domain only                        |
+| **Performance**             | Slower (sent in every HTTP request)               | Faster (client-only)               |
+| **Storage type**            | String only                                       | String only                        |
+| **Best for**                | Authentication, sessions                          | UI state, caching, preferences     |
+*/
+
+
+/////////////////////////////////////////////////////////////=======================================================

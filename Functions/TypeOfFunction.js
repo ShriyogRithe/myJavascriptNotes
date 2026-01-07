@@ -147,7 +147,7 @@
 // Edit
 // setTimeout(p.sayName.bind(p), 0); // 'Shriyogrithe'
 
-// Bind chaining is not possible it will not give error but not 1st function bind only exists
+// Bind chaining is not possible it will give error
 
 // arrow functions get this by it's lexiographically function
 
@@ -230,7 +230,7 @@
 // console.log(fact(5)); // Calculates and stores in cache
 // console.log(fact(5)); // Fetches from cache
 
-
+/////////////=====================================================
 //Counter example
 // function counter() {
 //   let count = 0;  // Private variable
@@ -253,6 +253,10 @@
 // console.log(myCounter.increment()); // 2
 // console.log(myCounter.getCount());  // 2
 // console.log(myCounter.decrement()); // 1
+
+
+/////////////=====================================================
+
 
 //IMP 
 // function outer() {

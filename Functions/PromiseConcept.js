@@ -1,3 +1,4 @@
+/*
 function retry(fn, retry = 3, delay = 300) {
   function attempt(retry) {
     return new Promise((resolve, reject) => {
@@ -34,3 +35,34 @@ function fetchData() {
 }
 
 retry(fetchData)
+*/
+
+
+/*
+Simple version 
+function retry(fn, r = 3, delay = 300) {
+   return new Promise((res, rej) => {
+       fn()
+       .then((res1) => res("Success Full ex....."))
+       .catch(
+           retry(fn, r - 1, delay)
+           .then((res1) => res("Success Full ex....."))
+           .catch()
+           
+           )
+   })
+}
+
+function fetchData() {
+    return new Promise((res, rej) => {
+        const success = Math.random() > 0.7
+        setTimeout(() => {
+            success ? res("Fetched data") : rej("Error while fetching data")
+        }, 300)
+    })
+}
+
+retry(fetchData, 3, 300)
+.then((res) => console.log(res))
+.catch((res) => console.log(res))
+*/

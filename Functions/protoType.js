@@ -64,3 +64,6 @@
 // __proto__ is pointing to string object
 
 // basically name.__proto__ = String.prototype(done internally)
+
+
+////////////////////////////////=======================================
