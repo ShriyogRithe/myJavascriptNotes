@@ -1,6 +1,6 @@
 // Question 1 : "use new keyword and make show function pointing to a different object"
 // 1. const obj = { x : 20 }
-// function show() {
+// function show() {f
 //     console.log(this)
 // }
 // new (show.bind(obj)) //✅ in thi case 'new' keyword got high precedence than 'this' keyword
@@ -23,6 +23,10 @@
 //=====================
 
 // Question 2 : Difference between Object.create and {}
+
+// Ans 2 : {}: Inherits from Object.prototype.
+// new: Inherits from the constructor function's prototype.
+// Object.create(): Inherits from the explicitly provided prototype object.
 // 1. 
 // const obj1 = { name: "Alice" };
 // console.log(obj1.name); // Output: Alice ✅
@@ -87,7 +91,8 @@
 // const c = showMessage.bind({ message: 'Hello world'}, 1, 2, 3, 4);
 
 
-//================================================================
+//==========================================================================================
+
 // Question on this 
 // function Pet(name) {
 //    this.name = name
@@ -99,7 +104,111 @@
 // const { getName } = cat
 // console.log(getName())
 
-//================================================================
+//==========================================================================================
 
-//
+// const obj = {
+//     a: 1,
+//     b: 2,
+//     sum() {
+//         return this.a + this.b
+//     }
+// }
+
+// const res = obj.sum;
+// console.log(res())
+
+
+//==========================================================================================
+
+
+// function makeUser() {
+//     return {
+//         name : "Shriyog",
+//         ref: this    // second question how can we make this pointing to current obj (use ref as function)
+//     }
+// }
+// const user = makeUser()
+// console.log(user.ref.name)
+
+
+//==========================================================================================
+
+// Question when use setTimeout(handler)
+// const user = {
+//     name: "Shriyog",
+//     logMessage() {
+//         console.log(this.name)
+//     }
+// }
+
+// setTimeout(user.logMessage, 1000)
+
+// Soln 
+// setTimeout(
+// function () {
+// user.logMessage()
+// }, 1000)
+
+//==========================================================================================
+
+
+/*
+global.length = 5
+
+function callback() {
+    console.log(this)
+    console.log(this.length)
+}
+
+const obj = {
+    length: 4,
+    method() {
+      arguments[0]()
+    }
+}
+
+obj.method(callback, 4, 5)
+
+
+                | Call style       | `this` value       |
+                | ---------------- | ------------------ |
+                | `fn()`           | global / undefined |
+                | `obj.fn()`       | obj                |
+                | `arguments[0]()` | arguments object   |
+                | `fn.call(x)`     | x                  |
+                | Arrow function   | lexical this       |
+*/
+
+//==========================================================================================
+
+/*
+
+Solve [calc.add(10).sub(3).multiply(8)]
+const calc = {
+    res : 0,
+    add: function add(value) {
+      this.res += value
+      return this
+    },
+    sub: function sub(value) {
+        this.res -= value
+        return this
+    },
+    multiply: function multiply(value) {
+        this.res *= value
+        return this
+    }  
+}
+const result = calc.add(10).sub(3).multiply(8)
+
+console.log(result.res)
+
+*/
+
+
+//==========================================================================================
+
+
+
+
 

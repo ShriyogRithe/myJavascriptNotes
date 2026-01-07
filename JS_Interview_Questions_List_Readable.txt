@@ -1,0 +1,105 @@
+====================================================
+✅ Commonly Asked JavaScript Questions (With Topics)
+====================================================
+
+🔁 RECURSION / OBJECT TRAVERSAL
+------------------------------
+1. Flatten Nested Object
+   Input:
+     const obj = { a: { b: { c: 1 } }, d: 2 }
+   Output:
+     ["a.b.c", "d"]
+
+2. Unflatten Object
+   Input:
+     { "a.b.c": 1, "d": 2 }
+   Output:
+     { a: { b: { c: 1 } }, d: 2 }
+
+3. Deep Clone an Object
+   (Without structuredClone or JSON.parse(JSON.stringify(...)))
+
+4. Find value by path
+   get(obj, 'a.b.c') // should return the value
+
+5. Set value by path
+   set(obj, 'a.b.c', 10) // create path if needed
+
+6. Compare two objects deeply
+   isDeepEqual(obj1, obj2) // return true/false
+
+
+🔄 ARRAYS / UTILITIES
+---------------------
+7. Flatten a nested array
+   flatten([1, [2, [3, 4]], 5]) // [1, 2, 3, 4, 5]
+
+8. Group by key
+   groupBy([{age: 20}, {age: 25}, {age: 20}], 'age')
+   Output:
+     { "20": [...], "25": [...] }
+
+9. Implement Array.prototype.map / filter / reduce
+
+10. Remove duplicates from array
+    (Without using Set)
+
+11. Chunk an array
+    chunk([1, 2, 3, 4, 5], 2)
+    Output:
+      [[1,2], [3,4], [5]]
+
+
+📦 PROMISES / ASYNC
+-------------------
+12. Polyfill for Promise
+
+13. Promise.all Polyfill
+
+14. Retry function with delay
+    retry(() => fetch(...), 3, 1000)
+
+15. Throttle / Debounce functions
+
+16. Custom implementation of sleep
+    await sleep(1000) // delay 1 second
+
+
+⚙️ FUNCTION BEHAVIOR
+--------------------
+17. Currying a function
+    curry(fn)(1)(2)(3) // sum or collect args
+
+18. Compose / Pipe
+    compose(f1, f2, f3)(input)
+
+19. Memoization
+    const memoizedFn = memoize(fn)
+
+
+📚 STRING / PARSING
+-------------------
+20. Convert string path to object access
+    parsePath(obj, "a.b.c") => obj.a.b.c
+
+21. JSON flatten and unflatten
+    (Similar to object flattening but with stringified keys)
+
+
+🧪 DOM / BROWSER
+----------------
+22. Create a custom event emitter
+    const emitter = new EventEmitter()
+    emitter.on("click", handler)
+    emitter.emit("click")
+
+23. IntersectionObserver-based infinite scroll
+
+24. Detect if element is visible on screen
+
+
+🔒 SECURITY & EDGE CASES
+------------------------
+25. Safely access deep property (optional chaining polyfill)
+
+26. Check for circular references in object

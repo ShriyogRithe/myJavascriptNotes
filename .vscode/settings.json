@@ -1,0 +1,32 @@
+{
+  // ✅ Format on save
+  "editor.formatOnSave": true,
+
+  // ✅ Use Prettier as the default formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ✅ Organize imports and fix lint issues on save
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+
+  // ✅ JavaScript refactor helpers
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.preferences.useAliasesForRenames": true,
+
+  // ✅ Inlay hints for better understanding (like param names)
+  //   "javascript.inlayHints.parameterNames.enabled": "all",
+
+  // ✅ ESLint support
+  "eslint.enable": true,
+  "eslint.validate": ["javascript"],
+  "eslint.alwaysShowStatus": true,
+  "eslint.run": "onSave",
+
+  // ✅ Prettier options: NO semicolon, single quotes, trailing commas
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.arrowParens": "avoid"
+}
